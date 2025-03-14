@@ -1,0 +1,644 @@
+/* General Body Styling */
+body {
+    background: url('images/pink.jpg') center center fixed;
+    line-height: 1.6;               /* Improves text readability */
+    font-family: 'Times New Roman', Times, serif; 
+    color: #333;                    /* Default text color */
+    padding: 40px 20px;             /* Spacing around content */
+    min-height: 100vh;              /* Minimum full viewport height (fixed typo from 1000vh) */
+    position: relative;             /* Required for pseudo-element positioning */
+}
+
+/* Semi-transparent overlay for better text readability */
+body::before {
+    content: '';
+    position: fixed;               /* Fixed position covers entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.138);  /* White overlay with 90% opacity */
+    z-index: -1;                  /* Places overlay behind content */
+
+}
+
+/* Styling for main title */
+.main-title {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    margin: 2rem 0;
+    font-family: 'Times New Roman', Times, serif, bold;
+    font-size: 2.5rem;
+}
+
+.container {
+    max-width: 1200px; /* Keep it within a reasonable width */
+    width: 100%; /* Ensure it takes up full width but doesn't overflow */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Aligns items vertically */
+    margin: 50px auto; /* Centers the container */ 
+}
+
+/* About Section Styling */
+.about-section {
+    width: 70%; /* Adjust width as needed */
+    max-width: 900%; /* Prevent it from becoming too wide */
+    padding: 10px;
+    box-sizing: border-box;
+    background: rgba(245, 161, 230, 0.69); /* Ensure contrast with background */
+    margin: 0 auto; /* Centers the section */
+    border-radius: 10px; /* Optional: rounded corners */
+    display: flex;
+    align-items: center; /* Vertically aligns the image and text */
+    gap: 40px; /* Space between image and text */
+}
+
+/* Circle Image Styling */
+.circle-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;  /* Ensures the image covers the area */
+    display: block;
+}
+
+/* Box Styling inside About Section */
+.box1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Centers the text vertically with the image */
+}
+
+.box2 {
+    display: flex;
+    align-items: center;
+}
+
+/* Button Styling */
+input[type="submit"],
+input[type="reset"] {
+    margin: 1em 1em 1em 0;
+    padding: 0.5em 1em;
+}
+
+.box {
+    padding: 40px; /* Increase padding for a larger feel */
+    width: 90%; /* Make it take more width */
+    max-width: 900px; /* Allow it to be wider */
+    min-height: 400px; /* Make it taller */
+    font-size: 1.2rem; /* Increase overall text size */
+}
+
+.box h2 {
+    font-size: 2rem; /* Make the heading larger */
+}
+
+.box p {
+    font-size: 1.3rem; /* Increase paragraph text */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Grid Section Styling */
+.grid-section {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Section Description Styling */
+.section-description {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Split Section (Image + Content) */
+.split {
+    display: flex;
+    align-items: center;
+    gap: 20px;                     /* Space between image and text */
+}
+
+/* Reduce resume header size */
+.resume header h1 {
+    font-size: 1.8rem; /* Smaller title */
+}
+
+/* Reduce section headers */
+.resume h2 {
+    font-size: 1.5rem;
+}
+
+/* Reduce sub-headers */
+.resume h3 {
+    font-size: 1.2rem;
+}
+
+/* Reduce paragraph text */
+.resume p, .resume ul {
+    font-size: 0.9rem;
+    line-height: 1.4; /* Keeps text readable */
+}
+
+.image-container img {
+    width: 50%; /* Make the image fill its container */
+    height: 100%; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+    object-fit: cover; /* Ensures image covers the container */
+}
+
+/* Image Container Styling */
+.image-container {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.image-container img:hover {
+    transform: translateY(-5px);   /* Hover effect for images */
+}
+
+.contact {
+    display: inline-block; /* Shrink-wrap to fit content */
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-size: 1.2em;
+    text-align: left;
+    color: #000000;
+}
+
+.contact img.icon {
+    width: 15px; /* Make icons smaller */
+    height: auto;
+}
+
+.contact h1 {
+    font-size: 2em;
+}
+.contact a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.icon {
+    vertical-align: center;
+    margin-right: 5px;
+}
+
+/* Header Section Styling */
+header {
+    position: sticky;
+    top:0%;
+    width: 100%;
+    z-index: 1000;
+    text-align: left;
+    margin-bottom: 70px;
+    padding: 30px;
+    background: rgba(225, 225, 225, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(50px);    /* Frosted glass effect */
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* Header Title Styling */
+header h1 {
+    font-size: 2.5em;
+    color: #122c13;
+    margin-bottom: 1rem;
+}
+
+/* Header Subtitle Styling */
+header p {
+    font-size: 1.6em;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Section Styling */
+section {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(250, 211, 248, 0.95);
+    box-shadow: 0 4px 15px rgba(249, 138, 255, 0.466);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Section Heading Styling */
+section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(249, 138, 255, 0.201);
+}
+
+/* Section Paragraph Styling */
+section p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Grid layout styling */
+.grid {
+    display: flex; /* Use flexbox instead of grid */
+    align-items: center;
+    gap: 20px;
+}
+
+/* Grid item styling */
+.grid-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+    
+
+/* Image styling inside grid items */
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect on grid images */
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.image-container:hover .grid-item-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.grid-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+    
+/* Static Content styling for the sign up button/form */
+.static-content {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.static-content h2 {
+    color: #2c3e50;
+}
+
+.static-content p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.static-content button {
+    background-color: #e687f3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.static-content button:hover {
+    background-color: #c65bc6;
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: left;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.btn.cancel {
+    background-color: #79adfc;
+    color: white;
+}
+
+.btn.cancel:hover {
+    background-color: #4183c6;
+}
+
+img {
+    max-width: 100%;
+    height: 600px;
+    border-radius: 10px; 
+    flex-shrink: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* More spacing between elements */
+}
+
+p {
+    flex-grow: 1; /* Allows text to fill the remaining space */
+    font-size: 16px;
+    color: #333;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    grid-gap: 10px; /* Space between the images */
+    width: 100%;
+    max-width: 800px; /* Adjust the max width to fit your design */
+    margin: 0 auto; /* Centers the grid */
+}
+
+/* Image styling */
+.image-grid img {
+    width: 100%; /* Makes images responsive */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Ensures image covers the area */
+}
+
+/* Carousel Wrapper */
+.carousel {
+    width: 400%; /* Adjust the carousel container width */
+    height: 600px; /* Set a fixed height */
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out; /* Reduce from default timing */
+}
+
+.carousel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    flex:1
+}
+
+.carousel-container {
+    width: 100%;
+    height: auto;
+}
+
+/* Carousel Section Styling */
+.carousel-section {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Ensure h2 Title Stays at the Top */
+.carousel-title {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Ensure Section Description Stays Below h2 */
+.section-description {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Overlay styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff94f1b6; /* Semi-transparent background */
+    color: rgb(0, 0, 0); /* Text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Text styling */
+.overlay-text {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* Show overlay on hover */
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Show overlay on hover */
+.img-container1:hover .overlay {
+    opacity: 1;
+}
+
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 400%; /* 4 slides, 100% each */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 100%; /* Each slide takes full view width */
+    height: 100%;
+    flex: 0 0 100%; /* Ensures equal slide width */
+}
+
+.slide img {
+    width: 900px;
+    height: 600px;
+    object-fit: cover;
+}
+
+nav {
+    display: flex;              /* Makes links align horizontally */
+    justify-content: center;    /* Centers links in the navbar */
+    gap: 20px;                  /* Adds spacing between links */
+    background: rgba(245, 161, 230, 0.69); /* Light pink background */
+    padding: 10px;              /* Adds spacing inside nav */
+    border-radius: 10px;         /* Optional: Makes edges rounded */
+}
+
+nav a {
+    text-decoration: none;       /* Removes underline */
+    color: black;                /* Changes text color */
+    font-size: 25px;
+    font-weight: bold;           /* Makes text bold */
+    padding: 8px 12px;           /* Adds clickable area */
+    transition: color 0.3s;      /* Smooth hover effect */
+}
+
+nav a:hover {
+    color: #c65bc6;              /* Changes color on hover */
+}
+
+.nav-list {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 10px 0; /* Adds spacing between links */
+}
+
+/* Navigation Dots */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    bottom: 20px; /* Positions 20px from bottom of carousel */
+    left: 50%; 
+    transform: translateX(-50%); /* Centers the navigation dots */
+    gap: 13px; 
+    z-index: 10;
+    padding: 5px 5px;
+}
+
+.nav-btn {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.logo-container {
+    width: 200px; 
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+/* Logo Styling */
+.logo-container img {
+    width: 100%; 
+    height: auto; /* Maintains aspect ratio */
+}
+
+.nav-logo {
+    height: 50px; 
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Hide radio inputs for navigation */
+input[type="radio"] {
+    display: none;
+}
+#slide1:checked ~ .slides { transform: translateX(0%);   /* First slide */}
+#slide2:checked ~ .slides { transform: translateX(-100%); /* Second slide */}
+#slide3:checked ~ .slides { transform: translateX(-200%); /* Third slide */}
+#slide4:checked ~ .slides { transform: translateX(-300%); /* Fourth slide */}
+
+#slide1:checked ~ .navigation .nav-btn[for="slide1"],
+#slide2:checked ~ .navigation .nav-btn[for="slide2"],
+#slide3:checked ~ .navigation .nav-btn[for="slide3"],
+#slide4:checked ~ .navigation .nav-btn[for="slide4"]{
+    background: rgba(225, 225, 225, 0.9);
+}
+/* Footer Styling */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(249, 138, 255, 0.201);
+    backdrop-filter: blur(5px);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    section {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .image-container {
+        height: auto;
+        margin-bottom: 30px;
+    }
+}

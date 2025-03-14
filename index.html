@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fashion Advertising</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+        <!-- Navigation Header -->
+        <header>
+            <nav>
+                <a href="index.html" class="logo-container">
+                    <img src="images/logo.png" alt="Fashion Logo" class="nav-logo">
+                </a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="resume.html">Resume</a>
+                <a href="sources.html">Sources</a>
+            </nav>
+        </header>
+
+            <!-- Main Title Section -->
+        <section class="grid-section">
+            <div class="main-title">
+                <h1>Explore the Chic World of Fashion Advertising</h1>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="static-content">
+            <h2>Join my Passion4Fashion Newsletter!</h2>
+            <p>My take on what's stylish, timeless, and classy. By subscribing, you'll receive weekly outfit inspiration, insider tips from the fashion world, crafts, artwork, and more!</p>
+            <button onclick="document.getElementById('signup-form').style.display='block'">Sign Up</button>
+            <div id="signup-form" class="form-popup">
+                <form class="form-container">
+                    <h2>Sign Up for Passion4Fashion!</h2>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="fullname" placeholder="Enter your name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required> 
+                    
+                    <button type="submit" class="btn">Submit</button>
+                    <button type="button" class="btn cancel" onclick="document.getElementById('signup-form').style.display='none'">Close</button>
+                </form>
+    
+            </div>
+        </section>
+
+            <!-- Grid Section for Boxes -->
+            <div class="container">
+                <section class="box">
+                    <h2>Textile Waste</h2>
+                    <div class="content grid-item">
+                        <div class="image-container">
+                            <img src="images/textilewaste.jpg" alt="textile waste">
+                            <div class="overlay">This image is originally from SIFO, which is a consumption research company based in Norway. SIFO is a company that studies the production of clothing, greenwashing, microplastic shedding, and clothing waste.</div>
+                        </div>
+                        <p> One of my career goals is to help spread more awareness to combat textile waste in fashion, especially within the fast fashion shopping community.
+                            In 2023, Earth.org reports that there is 1.92 million tonnes of textile waste produced each year. This means that these tonnes of materials and clothing
+                            get burned, dumped in our oceans, and put into landfills increasing gloabl emissons by 50% by 2030. The number of times an article of clothing 
+                            is worn has decreased roughly by 36% in the last 15 years. In my own efforts to try and reduce clothing waste, I upcycle clothes and scrap fabrics
+                            into patchwork designs for myself and for my friends. I think fashion sustainability is extremely important as its killing our earth more rapidly than before.
+                        </p>
+                    </div>
+                </section>
+            </div>
+                
+        <!-- CSS-only Carousel Section -->
+        <section class="carousel-section">
+            <div class="container">
+                <h2 class="carousel-title">Women Empowerment Through Sports and Fashion</h2>
+                <p class="section-description">
+                    Womens empowerment is something I am extremely passionate about. I recently became extremely inspired by the Nike commercial during the Super Bowl LIX, "So Win." 
+                    I thought the message of this was exceedingly important in society and as a woman to continue to break boundaries in everything we do, including sports. I went on a deep 
+                    dive of fashion advertisements that showcased women actively participating in sports whilst looking fashionable while doing so. Women can really do it all.
+                </p>
+
+                <!-- Carousel wrapper -->
+                <div class="carousel">
+                    <!-- Radio buttons for slide navigation -->
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide2">
+                    <input type="radio" name="slide" id="slide3">
+                    <input type="radio" name="slide" id="slide4">
+
+                    <!-- Carousel slides container -->
+                    <div class="slides">
+                        <div class="slide">
+                            <div class="image-container">
+                                <img src="images/ball.jpg" alt="An advertisement">
+                                <div class="overlay">
+                                    <p class="overlay-text">An advertisement from Hana Kuma, a story driven produciton company. Photographed by Lafalaise DION</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="image-container">
+                                <img src="images/run1.jpg" alt="LE SSERAFIM for Louis Vuitton x Marie Claire Korea Magazine, June 2024 Issue">
+                                <div class="overlay">
+                                    <p class="overlay-text">LE SSERAFIM for Louis Vuitton x Marie Claire Korea Magazine</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="image-container">
+                                <img src="images/speed.jpg" alt="Image 3">
+                                <div class="overlay">
+                                    <p class="overlay-text">The Power of Sport on Fashion: Vogue China September 2023 issue, featuring model He Chong.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="image-container">
+                                <img src="images/run2.jpg" alt="Jaded London Pop Up Shop">
+                                <div class="overlay">
+                                    <p class="overlay-text">A pop-up shop advertisement for Jaded London featuring models running in their casual wea</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation">
+                        <label class="nav-btn" for="slide1"></label>
+                        <label class="nav-btn" for="slide2"></label>
+                        <label class="nav-btn" for="slide3"></label>
+                        <label class="nav-btn" for="slide4"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="image-grid">
+            <div class="image-container">
+                <img src="images/color6.jpg" alt="Image 1">
+                <div class="overlay">Hello Tokyo poster by magazine company Editorial Design.</div>
+            </div>
+            <div class="image-container">
+                <img src="images/color5.jpg" alt="Image 2">
+                <div class="overlay">Creator on pinterest @_UrbanWolf_ created this poster/advertisement.</div>
+            </div>
+            <div class="image-container">
+                <img src="images/color7.jpg" alt="Image 3">
+                <div class="overlay">Advertisement for EA gaming for their game The Sims.</div>
+            </div>
+            <div class="image-container">
+                <img src="images/color9.jpg" alt="Image 4">
+                <div class="overlay">A photshoot by a small artist, Muglerette, promoting their sticker collection.</div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2025 Fashion Advertising | All Rights Reserved | images are from various sources.</p>
+        </footer>
+    </body>
+</html>
